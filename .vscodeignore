@@ -1,0 +1,10 @@
+.DS_Store
+
+node_modules
+.vscode
+*.vsix
+
+.editorconfig
+.gitignore
+CONTRIBUTING.md
+package-lock.json

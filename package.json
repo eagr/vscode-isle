@@ -1,0 +1,37 @@
+{
+  "name": "vscode-isle",
+  "displayName": "ISLE",
+  "description": "ISLE language support",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "isle",
+        "aliases": [
+          "ISLE",
+          "isle"
+        ],
+        "extensions": [
+          ".isle"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "isle",
+        "scopeName": "source.isle",
+        "path": "./syntaxes/isle.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

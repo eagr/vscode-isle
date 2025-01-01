@@ -1,0 +1,84 @@
+{
+  "name": "ISLE",
+  "scopeName": "source.isle",
+  "fileTypes": [
+    "isle",
+    "ISLE"
+  ],
+  "patterns": [
+    {
+      "name": "comment.line.isle",
+      "match": ";.*$"
+    },
+    {
+      "name": "comment.block.isle",
+      "begin": "\\(;",
+      "end": ";\\)"
+    },
+    {
+      "name": "constant.numeric.isle",
+      "patterns": [
+        {
+          "name": "constant.numeric.decimal.isle",
+          "match": "\\b-?[0-9][0-9_]*\\b"
+        },
+        {
+          "name": "constant.numeric.hex.isle",
+          "match": "\\b-?0[xX][0-9a-fA-F_]+\\b"
+        },
+        {
+          "name": "constant.numeric.binary.isle",
+          "match": "\\b-?0[bB][01_]+\\b"
+        },
+        {
+          "name": "constant.numeric.octal.isle",
+          "match": "\\b-?0[oO][0-7_]+\\b"
+        },
+        {
+          "name": "constant.numeric.bitvec.isle",
+          "match": "\\B#b[+-]?[0-1]+\\b"
+        },
+        {
+          "name": "constant.numeric.bitvec.isle",
+          "match": "\\B#x[+-]?[0-9A-Fa-f]+\\b"
+        }
+      ]
+    },
+    {
+      "name": "constant.language.isle",
+      "match": "\\b(true|false)\\b"
+    },
+    {
+      "name": "constant.other.isle",
+      "match": "\\B\\$[^\\s();@]*\\b"
+    },
+    {
+      "name": "keyword.operator.isle",
+      "match": "@\\B"
+    },
+    {
+      "name": "keyword.other.isle",
+      "match": "\\b_\\b"
+    },
+    {
+      "name": "keyword.other.isle",
+      "match": "(?<=\\()(pragma|type|primitive|enum|decl|rule|extractor|extern|convert|and|or|not|if-let|if|let|model|form|spec|provide|require|instantiate|bv|args|ret|canon)\\b"
+    },
+    {
+      "name": "keyword.other.isle",
+      "match": "(?<=\\s)(extern|nodebug|pure|multi|partial|const|constructor|extractor|infallible)\\b"
+    },
+    {
+      "name": "entity.name.function.isle",
+      "match": "(?<=\\()[a-z][^\\s();@]*\\b"
+    },
+    {
+      "name": "entity.name.type.isle",
+      "match": "\\b[A-Z][^\\s();@]*\\b"
+    },
+    {
+      "name": "variable.other.isle",
+      "match": "[^\\s();$#0-9-][^\\s();@]*"
+    }
+  ]
+}
